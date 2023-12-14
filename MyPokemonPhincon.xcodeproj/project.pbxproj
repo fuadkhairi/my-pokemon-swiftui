@@ -7,21 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F81FCC0B2B2AEE530001D8CA /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81FCC0A2B2AEE530001D8CA /* Shared.framework */; };
+		F81FCC0C2B2AEE530001D8CA /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F81FCC0A2B2AEE530001D8CA /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F81FCC372B2AF17B0001D8CA /* PokemonDetails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81FCC292B2AF1120001D8CA /* PokemonDetails.framework */; };
+		F81FCC382B2AF17B0001D8CA /* PokemonDetails.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F81FCC292B2AF1120001D8CA /* PokemonDetails.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F81FCC702B2AF6DA0001D8CA /* PokemonList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81FCC612B2AF67E0001D8CA /* PokemonList.framework */; };
+		F81FCC712B2AF6DA0001D8CA /* PokemonList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F81FCC612B2AF67E0001D8CA /* PokemonList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8C6A72A2B299D5000772964 /* MyPokemonPhinconApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6A7292B299D5000772964 /* MyPokemonPhinconApp.swift */; };
-		F8C6A72C2B299D5000772964 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6A72B2B299D5000772964 /* ContentView.swift */; };
 		F8C6A72E2B299D5100772964 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C6A72D2B299D5100772964 /* Assets.xcassets */; };
 		F8C6A7312B299D5100772964 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C6A7302B299D5100772964 /* Preview Assets.xcassets */; };
-		F8C6A7332B299D5100772964 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6A7322B299D5100772964 /* Persistence.swift */; };
 		F8C6A7362B299D5100772964 /* MyPokemonPhincon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8C6A7342B299D5100772964 /* MyPokemonPhincon.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F81FCC282B2AF1120001D8CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81FCC242B2AF1110001D8CA /* PokemonDetails.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F81FCC1A2B2AF1110001D8CA;
+			remoteInfo = PokemonDetails;
+		};
+		F81FCC602B2AF67E0001D8CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81FCC5C2B2AF67E0001D8CA /* PokemonList.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F81FCC522B2AF67E0001D8CA;
+			remoteInfo = PokemonList;
+		};
+		F81FCC8A2B2AF7260001D8CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81FCC862B2AF7250001D8CA /* MyPokemonList.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F81FCC7C2B2AF7250001D8CA;
+			remoteInfo = MyPokemonList;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F81FCC0D2B2AEE530001D8CA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F81FCC0C2B2AEE530001D8CA /* Shared.framework in Embed Frameworks */,
+				F81FCC712B2AF6DA0001D8CA /* PokemonList.framework in Embed Frameworks */,
+				F81FCC382B2AF17B0001D8CA /* PokemonDetails.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F81FCC0A2B2AEE530001D8CA /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81FCC242B2AF1110001D8CA /* PokemonDetails.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PokemonDetails.xcodeproj; path = PokemonDetails/PokemonDetails.xcodeproj; sourceTree = "<group>"; };
+		F81FCC5C2B2AF67E0001D8CA /* PokemonList.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PokemonList.xcodeproj; path = PokemonList/PokemonList.xcodeproj; sourceTree = "<group>"; };
+		F81FCC862B2AF7250001D8CA /* MyPokemonList.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MyPokemonList.xcodeproj; path = MyPokemonList/MyPokemonList.xcodeproj; sourceTree = "<group>"; };
 		F8C6A7262B299D5000772964 /* MyPokemonPhincon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPokemonPhincon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C6A7292B299D5000772964 /* MyPokemonPhinconApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPokemonPhinconApp.swift; sourceTree = "<group>"; };
-		F8C6A72B2B299D5000772964 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F8C6A72D2B299D5100772964 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8C6A7302B299D5100772964 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F8C6A7322B299D5100772964 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		F8C6A7352B299D5100772964 /* MyPokemonPhincon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyPokemonPhincon.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -30,17 +76,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81FCC0B2B2AEE530001D8CA /* Shared.framework in Frameworks */,
+				F81FCC702B2AF6DA0001D8CA /* PokemonList.framework in Frameworks */,
+				F81FCC372B2AF17B0001D8CA /* PokemonDetails.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F81FCC092B2AEE500001D8CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F81FCC0A2B2AEE530001D8CA /* Shared.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F81FCC252B2AF1110001D8CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F81FCC292B2AF1120001D8CA /* PokemonDetails.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F81FCC472B2AF62B0001D8CA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F8C6A7292B299D5000772964 /* MyPokemonPhinconApp.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F81FCC5D2B2AF67E0001D8CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F81FCC612B2AF67E0001D8CA /* PokemonList.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F81FCC872B2AF7250001D8CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F81FCC8B2B2AF7260001D8CA /* MyPokemonList.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F8C6A71D2B299D5000772964 = {
 			isa = PBXGroup;
 			children = (
 				F8C6A7282B299D5000772964 /* MyPokemonPhincon */,
 				F8C6A7272B299D5000772964 /* Products */,
+				F81FCC092B2AEE500001D8CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +145,9 @@
 		F8C6A7282B299D5000772964 /* MyPokemonPhincon */ = {
 			isa = PBXGroup;
 			children = (
-				F8C6A7292B299D5000772964 /* MyPokemonPhinconApp.swift */,
-				F8C6A72B2B299D5000772964 /* ContentView.swift */,
-				F8C6A72D2B299D5100772964 /* Assets.xcassets */,
-				F8C6A7322B299D5100772964 /* Persistence.swift */,
-				F8C6A7342B299D5100772964 /* MyPokemonPhincon.xcdatamodeld */,
+				F81FCC472B2AF62B0001D8CA /* Main */,
+				F8C6A74C2B29DD6000772964 /* Features */,
+				F8C6A7472B29DB5200772964 /* Assets */,
 				F8C6A72F2B299D5100772964 /* Preview Content */,
 			);
 			path = MyPokemonPhincon;
@@ -73,6 +161,25 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F8C6A7472B29DB5200772964 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F8C6A7342B299D5100772964 /* MyPokemonPhincon.xcdatamodeld */,
+				F8C6A72D2B299D5100772964 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F8C6A74C2B29DD6000772964 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F81FCC5C2B2AF67E0001D8CA /* PokemonList.xcodeproj */,
+				F81FCC242B2AF1110001D8CA /* PokemonDetails.xcodeproj */,
+				F81FCC862B2AF7250001D8CA /* MyPokemonList.xcodeproj */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,12 +190,15 @@
 				F8C6A7222B299D5000772964 /* Sources */,
 				F8C6A7232B299D5000772964 /* Frameworks */,
 				F8C6A7242B299D5000772964 /* Resources */,
+				F81FCC0D2B2AEE530001D8CA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MyPokemonPhincon;
+			packageProductDependencies = (
+			);
 			productName = MyPokemonPhincon;
 			productReference = F8C6A7262B299D5000772964 /* MyPokemonPhincon.app */;
 			productType = "com.apple.product-type.application";
@@ -117,14 +227,54 @@
 				Base,
 			);
 			mainGroup = F8C6A71D2B299D5000772964;
+			packageReferences = (
+			);
 			productRefGroup = F8C6A7272B299D5000772964 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F81FCC872B2AF7250001D8CA /* Products */;
+					ProjectRef = F81FCC862B2AF7250001D8CA /* MyPokemonList.xcodeproj */;
+				},
+				{
+					ProductGroup = F81FCC252B2AF1110001D8CA /* Products */;
+					ProjectRef = F81FCC242B2AF1110001D8CA /* PokemonDetails.xcodeproj */;
+				},
+				{
+					ProductGroup = F81FCC5D2B2AF67E0001D8CA /* Products */;
+					ProjectRef = F81FCC5C2B2AF67E0001D8CA /* PokemonList.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F8C6A7252B299D5000772964 /* MyPokemonPhincon */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F81FCC292B2AF1120001D8CA /* PokemonDetails.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PokemonDetails.framework;
+			remoteRef = F81FCC282B2AF1120001D8CA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F81FCC612B2AF67E0001D8CA /* PokemonList.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PokemonList.framework;
+			remoteRef = F81FCC602B2AF67E0001D8CA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F81FCC8B2B2AF7260001D8CA /* MyPokemonList.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MyPokemonList.framework;
+			remoteRef = F81FCC8A2B2AF7260001D8CA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F8C6A7242B299D5000772964 /* Resources */ = {
@@ -143,8 +293,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8C6A7332B299D5100772964 /* Persistence.swift in Sources */,
-				F8C6A72C2B299D5000772964 /* ContentView.swift in Sources */,
 				F8C6A72A2B299D5000772964 /* MyPokemonPhinconApp.swift in Sources */,
 				F8C6A7362B299D5100772964 /* MyPokemonPhincon.xcdatamodeld in Sources */,
 			);

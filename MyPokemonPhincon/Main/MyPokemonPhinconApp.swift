@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Shared
+import PokemonList
 
 @main
 struct MyPokemonPhinconApp: App {
@@ -13,7 +15,9 @@ struct MyPokemonPhinconApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let interactor = PokemonListInteractor()
+            let presenter = PokemonListPresenter(interactor: interactor)
+            PokemonListView(presenter: presenter)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
