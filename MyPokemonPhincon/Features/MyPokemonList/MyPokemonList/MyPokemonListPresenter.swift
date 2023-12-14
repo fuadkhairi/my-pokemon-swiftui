@@ -46,8 +46,6 @@ public class MyPokemonListPresenter: ObservableObject {
         isLoading = true
         guard let pokemon = pokemon else { return }
         
-        print("new nickname: \(newNickname)")
-        
         interactor.getNewPokemonName(pokemon: pokemon, newNickname: newNickname, completion: { [weak self] newCount in
             guard let self else { return }
             DispatchQueue.main.async {

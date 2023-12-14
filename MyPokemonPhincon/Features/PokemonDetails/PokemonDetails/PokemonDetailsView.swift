@@ -61,7 +61,9 @@ struct BottomButtonView: View {
                         .padding(.horizontal)
                     
                     Button(action: {
-                        presenter.addToMyPokemonList()
+                        if !presenter.nickname.isEmpty {
+                            presenter.addToMyPokemonList()
+                        }
                     }) {
                         Text("Add to My Pokemon List")
                             .padding()

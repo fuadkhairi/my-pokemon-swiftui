@@ -53,7 +53,6 @@ public class PokemonDetailsInteractor {
     
     func tryToCatchPokemon(completion: @escaping (Bool) -> Void) {
         guard let catchPokemonApi = URL(string: "\(Constant.serverLessBaseUrl)/api/getRandomBool") else {
-            print("link error")
             completion(false)
             return
         }
@@ -62,7 +61,6 @@ public class PokemonDetailsInteractor {
             if let data = data {
                 do {
                     let result = try JSONDecoder().decode(CatchPokemon.self, from: data)
-                    print("cathcpokemon: \(result.value)")
                     completion(result.value)
                 } catch {
                     print("Error decoding Pokemon details JSON: \(error)")

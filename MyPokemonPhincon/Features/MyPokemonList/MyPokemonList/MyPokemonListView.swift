@@ -30,11 +30,10 @@ public struct MyPokemonListView: View {
     public var body: some View {
         
         ZStack {
-            
             List {
                 ForEach(myPokemon, id: \.dateCreated) { pokemon in
                     NavigationLink(destination: {
-                        PokemonDetailsView(presenter: PokemonDetailsPresenter(interactor: PokemonDetailsInteractor(pokemon: Pokemon(name: pokemon.name ?? "", url: pokemon.url ?? "", imageUrl: pokemon.imageUrl ?? "", nickname: pokemon.nickname ?? ""), viewContext: viewContext)))
+                        PokemonDetailsView(presenter: PokemonDetailsPresenter(interactor: PokemonDetailsInteractor(pokemon: Pokemon(name: pokemon.name ?? "", url: pokemon.url ?? "", imageUrl: pokemon.imageUrl ?? "", nickname: pokemon.count == 0 ? pokemon.nickname : "\(pokemon.nickname ?? "")-\(pokemon.postFix)" ), viewContext: viewContext)))
                     }) {
                         HStack {
                             if let imageUrl = pokemon.imageUrl {
@@ -64,19 +63,19 @@ public struct MyPokemonListView: View {
                                 isRenameSheetPresented.toggle()
                             }
                         }
-                        .alert(isPresented: $presenter.showAlert) {
-                            Alert(
-                                title: Text(presenter.isReleaseSuccess ? "Success!" : "Failed!"),
-                                message: Text(presenter.isReleaseSuccess ? "You successfully release a pokemon!" : "Failed to release the pokemon, try again."),
-                                dismissButton: .default(Text("OK"), action: {
-                                    presenter.showAlert = false
-                                })
-                            )
-                        }
-                        .padding()
                     }
                 }
             }
+            .alert(isPresented: $presenter.showAlert) {
+                Alert(
+                    title: Text(presenter.isReleaseSuccess ? "Success!" : "Failed!"),
+                    message: Text(presenter.isReleaseSuccess ? "You successfully release a pokemon!" : "Failed to release the pokemon, try again."),
+                    dismissButton: .default(Text("OK"), action: {
+                        presenter.showAlert = false
+                    })
+                )
+            }
+            .padding()
             
             if presenter.isLoading {
                 ProgressView()

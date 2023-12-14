@@ -66,7 +66,6 @@ public class MyPokemonListInteractor {
     
     func releasePokemon(pokemon: MyPokemon, completion: @escaping (Bool, Int, Bool) -> Void) {
         guard let catchPokemonApi = URL(string: "\(Constant.serverLessBaseUrl)/api/getRandomNumber") else {
-            print("link error")
             completion(false, 0, false)
             return
         }
@@ -75,10 +74,8 @@ public class MyPokemonListInteractor {
             if let data = data {
                 do {
                     let result = try JSONDecoder().decode(ReleasePokemon.self, from: data)
-                    print("release_pokemon: \(result.value) \(result.is_prime)")
                     completion(result.is_success, result.value, result.is_prime)
                 } catch {
-                    print("Error decoding Pokemon details JSON: \(error)")
                     completion(false, 0, false)
                 }
             }
